@@ -1,4 +1,8 @@
 ### IntelliJ IDEA ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
