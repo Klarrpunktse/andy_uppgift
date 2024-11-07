@@ -44,6 +44,7 @@ public class Main {
         String Code_ID = "LordOfLord";
 
         System.out.println("Användarnamn");
+        System.out.println("Användarnamn");
         String Username = sc.nextLine();
         System.out.println("Password");
         String Password = sc.nextLine();
