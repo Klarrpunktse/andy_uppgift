@@ -83,6 +83,12 @@ public class IncomeStorage {
         // vi hämtar datumer med gettern andra argumentet är hela incomen
     }
 
+    public void listAllIncomes() {
+        for(String date : incomeList.keySet()) {
+            System.out.println("Date: " + date);
+        }
+    }
+
     // - listAllIncomes(): visa alla incomes i din lista
     // - removeIncome(): ta bort en incomes från listan
     // - updateIncome(): uppdatera en incomes

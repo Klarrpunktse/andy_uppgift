@@ -21,13 +21,13 @@ public class Main {
         // val du behöver ha i din meny
 
         // skapar en ny Income
-        Income income = new Income("2024-11-04", 1000);
+      //  Income income = new Income("2024-11-04", 1000);
         // kallar på addIncome() och skickar in income som nyss skapades
-        incomeStorage.addIncome(income);
+     //   incomeStorage.addIncome(income);
 
         // testar att lägga till en Income så att vi ser att den sparar båda och inte kör över
-        Income secondIncome = new Income("2024-11-02", 3000);
-        incomeStorage.addIncome(secondIncome);
+      //  Income secondIncome = new Income("2024-11-02", 3000);
+      //  incomeStorage.addIncome(secondIncome);
 
         // viktigt att inte glömma att spara till fil!
         incomeStorage.saveFile();
@@ -69,13 +69,22 @@ public class Main {
             int sum = 10000;
 
             if (valet == 1) {
-                System.out.println("sätta in hur mycket?");
-                int deposit = sc.nextInt();
+                incomeStorage.listAllIncomes();
 
-                if (sum > 0) {
+                System.out.println("sätta in hur mycket?");
+                double deposit = sc.nextDouble();
+
+                System.out.println("ange datum YYYY-MM-DD");
+                String date = sc.next();
+
+                Income income = new Income(date, deposit);
+                incomeStorage.addIncome(income);
+                incomeStorage.saveFile();
+
+                /*if (sum > 0) {
                     deposit += sum;
                     System.out.println(deposit);
-                }
+                }*/
             } else if (valet == 2) {
                 System.out.println("Tar ut hur mycket");
                 double withdraw = sc.nextInt();
